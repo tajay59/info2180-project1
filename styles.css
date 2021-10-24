@@ -1,11 +1,230 @@
 /* Add your CSS to this file */
+
+:root{ 
+    --defaultFontFamily: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    --defaultFontSize: 18px;
+    --defaultPadding:15px;
+    --defaultMargin: 50px;
+    --defaultTopBottomPadding :50px;
+}
+
+
 body {
+    font-family: var(--defaultFontFamily);
+    font-size: var(--defaultFontSize);
     margin: 0;
-    font-size: 16px;
 }
 
 .container {
     margin: 0 auto;
     max-width: 960px;
     width: 100%;
+}
+
+ header{
+     background-color: white;
+     font-size: var(--defaultFontSize);
+ }
+
+header > div ,nav > ul{
+    display: flex;
+}
+
+header > div > h1 {
+    
+    width: 40%; 
+}
+header > div > nav{
+    display: flex;
+    width: 60%;
+}
+
+header > div > nav > ul {    
+    list-style-type: none;
+    display: flex;
+    width: 100%; 
+    justify-content: center;
+    align-items: center;
+}
+header > div > nav > ul > li > a:link{
+    color:#6b7280 ;
+}
+
+header > div > nav > ul > li > a:hover{
+    color:#5A67D8 ;
+}
+
+ul > li {
+    padding-right: 20px;
+}
+
+/*      Hero overview section       */
+section.overview-hero{
+    background-color: #E2E8F0;  
+    padding: var(--defaultPadding);
+}
+
+.overview-hero-image > img{
+    max-width: 300px;
+    max-height: 300px;
+    margin-right: var(--defaultMargin);
+
+}
+
+section.overview-hero > div{
+    display: flex; 
+}
+
+
+/*      Learn about section     */
+.cards{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.card{
+    border-radius: 5px;
+    border-color: #E2E8F0;
+    box-shadow: 0 3px 3px 3px rgb(0 0 0 / 0.2);
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.card > img {
+   height  : 300px;
+   width   : 300px;
+}
+
+.card  > h3 {
+    color: #48BB78;
+    font-size: 21px;
+}
+ 
+section > div > h2 {
+    color: #48BB78;
+    font-size: 24px;
+}
+
+/*      Testing section     */
+section.testing {
+     
+    background-color:#4A5568;
+    color: white;
+    padding-top:var(--defaultTopBottomPadding);
+    padding-bottom:var(--defaultTopBottomPadding);
+}
+section.testing .container {
+    display         : flex;
+    width           : 100%; 
+}
+
+.testing-desciption{
+margin-right: var(--defaultMargin);
+width: 70%;
+}
+
+.cta > a:link{
+    border-radius: 5px;
+    background-color: #48BB78;
+    padding: 15px;
+    
+}
+
+.cta{
+
+    width: 30%;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+}
+
+/*      Stories section     */
+section.stories >  div >  h2, .article-body > p > a:link{
+    color: #5A67D8;
+}
+
+.article-body > h3 {
+    font-size: 18px;
+}
+
+section.stories >  div >  article{
+display         : flex;
+justify-content : center;
+align-items     : center;
+
+}
+
+section.stories >  div > article > img{
+    margin-right  : var(--defaultMargin);
+    border-radius : 50%;
+    height        : 150px;
+    width         : 150px;
+    }
+
+
+/*      Newsletter Section      */
+
+section.newsletter{
+    background-color:#48BB78 ;
+    color: white;
+    padding-top:var(--defaultTopBottomPadding);
+    padding-bottom:var(--defaultTopBottomPadding);
+}
+
+section.newsletter > div {
+    max-width      : 500px;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+}
+
+
+
+section.newsletter > div > form {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    padding        : 10px;
+    width          : 100%;
+}
+
+section.newsletter > div > form > div{
+    margin-right: 20px;
+
+}
+
+section.newsletter > div > form > button {
+    background-color: #5A67D8; 
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+section.newsletter > div > form > div {
+width: 70%;
+}
+
+section.newsletter > div > form > div > input {
+    border-radius: 5px;
+    border: none;  
+    height: 45px;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;  
+}
+
+/*      Footer      */
+footer {
+    background-color: #4A5568;
+    color: white;
+    padding-top:20px;
+    padding-bottom:20px;
 }
